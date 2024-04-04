@@ -1,0 +1,23 @@
+.app-header {
+  position:sticky;
+  top:0;
+  z-index: 1000;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the children evenly */
+  align-items: center; /* Align items vertically in the center */
+  padding: 0 20px; /* Add some padding on the sides */
+  background-color: #282c34; /* Example background color */
+  color: white; /* Text color */
+}
+
+.menu-log, .main-logo, .search-logo {
+  text-align: center; /* Center text within each section */
+}
+
+.menu-log, .search-logo {
+  flex: 1; /* Take up 25% of the space */
+}
+
+.main-logo {
+  flex: 2; /* Take up 50% of the space */
+}

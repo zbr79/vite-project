@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center; /* Horizontally center the child elements */
+  align-items: center; /* Vertically center the child elements */
+  min-height: 100vh; /* Minimum height to cover the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+.pageContainer {
+  background-color: #f5f5f5; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralize content */
+  padding: 20px;
+  /* Ensure the container can grow to fit content but is also scrollable if the content overflows */
+  max-height: 100vh;
+  overflow: auto;
+  width: 100%; /* Or a specific max-width for larger screens */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.recipePicture, .stepPicture {
+  max-width: 100%;
+  max-height: 400px; /* Ensure pictures are not too large */
+  height: auto;
+  border-radius: 8px; /* Soften the edges */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px;
+}
+
+/* Other styles remain the same */
+.section {
+  margin-bottom: 30px;
+  width: 80%; /* Adjust the width of sections to manage content size */
+}
+
+.ingredientTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.ingredientTable td, .ingredientTable th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.ingredientTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.stepsList {
+  list-style-type: none;
+  padding: 0;
+  width: 80%; /* Manage steps list size */
+}
+
+.stepItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.stepItem:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+  .section, .stepsList {
+      width: 100%; /* Ensure full width on smaller screens */
+  }
+}
+
+
+.sectionHeader {
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between title and button */
+  width: 100%;
+  margin-bottom: 10px; /* Optional: Adjust as needed for spacing */
+}
+
+.toggleButton {
+  cursor: pointer;
+  padding: 5px 10px; /* Adjust padding as needed */
+  background-color: #f0f0f0; /* Light background color for the button */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners for aesthetics */
+  font-size: 0.9em; /* Adjust font size as needed */
+}

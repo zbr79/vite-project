@@ -1,0 +1,34 @@
+.typeButton {
+    background-color: blue;
+    color: white;
+    margin: 5px;
+  }
+  
+  .catalogButton {
+    background-color: purple;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  .recipeButton {
+    background-color: green;
+    height: 30vh;
+    color: white;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .recipeImage {
+    width: 50%;
+    height: auto;
+    max-height:100%;
+    object-fit: cover;
+  }
+  
+  .catalogsContainer, .recipesContainer {
+    margin: 10px 0;
+  }
+  

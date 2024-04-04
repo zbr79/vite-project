@@ -1,0 +1,9 @@
+.app-footer {
+    background-color: #282c34; /* Dark background color */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some padding */
+    position: sticky; /* Optional: You can make it sticky to the bottom */
+    bottom: 0; /* Align to the bottom of the page or its container */
+    width: 100%; /* Ensure it spans the full width */
+  }

@@ -1,39 +1,62 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Tabs.css'; // Make sure this path is correct
-
-// Example image URLs or you can import local images
-const images = [
-  '/public/korean.png',
-  '/public/korean.png',
-  '/public/korean.png',
-  '/public/korean.png',
-  '/public/korean.png',
-  '/public/korean.png',
-];
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState(1);
-  const [direction, setDirection] = useState('right');
+  const [tabData, setTabData] = useState([]);
+  const [activeTab, setActiveTab] = useState('');
+  const [activeCatalogs, setActiveCatalogs] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
-  const handleTabClick = (newTab) => {
-    setDirection(newTab > activeTab ? 'right' : 'left');
-    setActiveTab(newTab);
+  useEffect(() => {
+    fetch('recipeTypes.json')
+      .then(response => response.json())
+      .then(data => {
+        setTabData(data);
+        if (data.length > 0) {
+          setActiveTab(data[0].typeName);
+          setActiveCatalogs(data[0].catalogs);
+        }
+      })
+      .catch(error => console.error("Failed to fetch tabs data", error));
+  }, []);
+
+  const selectTab = (typeName, catalogs) => {
+    setActiveTab(typeName);
+    setActiveCatalogs(catalogs);
+    // Optionally reset recipes when switching tabs
+    setRecipes([]);
+  };
+
+  const loadRecipesForCatalog = (catalogName) => {
+    // Adjust the path to where your catalog JSON files are stored
+    fetch(`./catalogs/${catalogName}.json`)
+      .then(response => response.json())
+      .then(data => {
+        setRecipes(data.recipes);
+      })
+      .catch(error => console.error(`Failed to fetch recipes for ${catalogName}`, error));
   };
 
   return (
-    <div className="tabs-wrapper">
-      <nav className="tabs-nav">
-        {[1, 2, 3, 4, 5, 6].map((tab) => (
-          <button key={tab} onClick={() => handleTabClick(tab)} className={`tab-button ${tab === activeTab ? 'active' : ''}`}>
-            Tab {tab}
+    <div>
+      <div className="tab-buttons">
+        {tabData.map(({ typeName, catalogs }) => (
+          <button key={typeName} onClick={() => selectTab(typeName, catalogs)}>
+            {typeName}
           </button>
         ))}
-      </nav>
-      <div className="tab-contents">
-        {images.map((image, index) => (
-          <div key={index} className={`tab-content ${index + 1 === activeTab ? 'active' : ''} ${direction}`}>
-            <img src={image} alt={`Content ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
+      </div>
+      <div className="catalog-buttons">
+        {activeCatalogs.map((catalog, index) => (
+          <button key={index} onClick={() => loadRecipesForCatalog(catalog)}>
+            {catalog}
+          </button>
+        ))}
+      </div>
+      <div className="recipe-buttons">
+        {recipes.map((recipe, index) => (
+          <button key={index}>
+            {recipe.name}
+          </button>
         ))}
       </div>
     </div>

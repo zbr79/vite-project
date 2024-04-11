@@ -1,0 +1,96 @@
+{
+  "recipes": [
+    {
+      "name": "Kimchi Fried Rice",
+      "picture": "/public/recipes/korean/kimchi-fried-rice.png",
+      "sections": [
+        {
+          "title": "Ingredients",
+          "items": [
+            { "name": "Oil", "amount": "2 tablespoons" },
+            { "name": "Kimchi", "amount": "1 cup, chopped" },
+            { "name": "Rice", "amount": "2 cups, cooked" },
+            { "name": "Green Onions", "amount": "1/4 cup, sliced" },
+            { "name": "Soy Sauce", "amount": "2 tablespoons" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "description": "Heat oil in a large skillet over medium heat.",
+          "picture": "/public/recipes/korean/steps/kimchi-fried-rice/step1.png"
+        },
+        {
+          "description": "Add kimchi and cook until fragrant."
+        },
+        {
+          "description": "Mix in the rice, ensuring it's well coated with kimchi flavor."
+        },
+        {
+          "description": "Stir in green onions and soy sauce, cooking until everything is heated through."
+        },
+        {
+          "description": "Serve hot, garnished with additional green onions if desired."
+        }
+      ]
+    },
+    {
+      "name": "Bibimbap",
+      "picture": "/public/recipes/korean/bibimbap.png",
+      "sections": [
+        {
+          "title": "Ingredients",
+          "items": [
+            { "name": "Rice", "amount": "2 cups, cooked" },
+            { "name": "Carrot", "amount": "1, julienned" },
+            { "name": "Spinach", "amount": "1 cup, blanched" },
+            { "name": "Zucchini", "amount": "1, thinly sliced" },
+            { "name": "Egg", "amount": "4, fried" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "description": "Prepare all ingredients and place them on top of the cooked rice in sections.",
+          "picture": "/public/recipes/korean/steps/bibimbap/step1.png"
+        },
+        {
+          "description": "Add a fried egg on top of each serving."
+        },
+        {
+          "description": "Serve with a side of gochujang (Korean chili paste) and mix everything together before eating."
+        }
+      ]
+    },
+    {
+      "name": "Tteokbokki",
+      "picture": "/public/recipes/korean/tteokbokki.png",
+      "sections": [
+        {
+          "title": "Ingredients",
+          "items": [
+            { "name": "Rice Cakes", "amount": "2 cups" },
+            { "name": "Fish Cake", "amount": "1 cup, sliced" },
+            { "name": "Gochujang", "amount": "3 tablespoons" },
+            { "name": "Sugar", "amount": "1 tablespoon" },
+            { "name": "Green Onion", "amount": "1/4 cup, chopped" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "description": "Boil the rice cakes until soft, then drain."
+        },
+        {
+          "description": "In a pan, mix gochujang, sugar, and a bit of water to make the sauce."
+        },
+        {
+          "description": "Add rice cakes and fish cake to the sauce, cooking until the sauce thickens."
+        },
+        {
+          "description": "Garnish with green onions and serve hot."
+        }
+      ]
+    }
+  ]
+}

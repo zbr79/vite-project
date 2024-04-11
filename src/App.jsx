@@ -4,9 +4,9 @@ import RecipePage from './pages/RecipePage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/vite-project">
       <Routes>
-      <Route path="/" exact component={HomePage} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/recipe" element={<RecipePage />} />
       </Routes>
     </BrowserRouter>

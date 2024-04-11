@@ -4,6 +4,7 @@ body {
   align-items: center; /* Vertically center the child elements */
   min-height: 100vh; /* Minimum height to cover the viewport */
   margin: 0; /* Remove default margin */
+  /* background-color: yellow; */
 }
 
 .pageContainer {

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Tabs = () => {
   const [tabData, setTabData] = useState([]);
   const [activeTab, setActiveTab] = useState('');
   const [activeCatalogs, setActiveCatalogs] = useState([]);
   const [recipes, setRecipes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('recipeTypes.json')
@@ -31,6 +36,7 @@ const Tabs = () => {
     fetch(`./catalogs/${catalogName}.json`)
       .then(response => response.json())
       .then(data => {
+        console.log(`Recipes loaded for ${catalogName}:`, data.recipes); // Debugging line
         setRecipes(data.recipes);
       })
       .catch(error => console.error(`Failed to fetch recipes for ${catalogName}`, error));
@@ -53,12 +59,12 @@ const Tabs = () => {
         ))}
       </div>
       <div className="recipe-buttons">
-        {recipes.map((recipe, index) => (
-          <button key={index}>
-            {recipe.name}
-          </button>
-        ))}
-      </div>
+  {recipes.map((recipe, index) => (
+    <button key={index} onClick={() => navigate('/recipe', { state: recipe })}>
+      {recipe.name}
+    </button>
+  ))}
+</div>
     </div>
   );
 };

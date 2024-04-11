@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import RecipePage from './pages/RecipePage';
 
 function App() {
   return (
-    <BrowserRouter basename="/vite-project">
+    <Router basename="/vite-project">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/recipe" element={<RecipePage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

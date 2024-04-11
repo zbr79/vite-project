@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
-import styles from '../styles/Recipe.module.css';
+import '../styles/Recipe.css';
 
 function RecipePage() {
     const location = useLocation();
-    const { recipe } = location.state;
+    const recipe  = location.state;
     // Initialize visibility state for sections
-    const [visibleSections, setVisibleSections] = useState({});
+    // const [visibleSections, setVisibleSections] = useState({});
 
     if (!recipe) {
         return <div>No recipe data available.</div>;

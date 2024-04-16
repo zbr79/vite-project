@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import '../styles/Tabs.css';
 
 
 const Tabs = () => {
@@ -46,9 +46,10 @@ const Tabs = () => {
     <div>
       <div className="tab-buttons">
         {tabData.map(({ typeName, catalogs }) => (
-          <button key={typeName} onClick={() => selectTab(typeName, catalogs)}>
-            {typeName}
-          </button>
+        <button key={typeName} onClick={() => selectTab(typeName, catalogs)}
+          className={typeName === activeTab ? 'active' : ''}>
+        {typeName}
+      </button>
         ))}
       </div>
       <div className="catalog-buttons">

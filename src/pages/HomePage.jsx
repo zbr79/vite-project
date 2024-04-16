@@ -12,15 +12,8 @@ function HomePage() {
 
     return (
         <div>
-            <Header />
-
-
-
+            {/* <Header /> */}
             <Tabs />
-
-
-
-
             <Footer />
         </div>
     );

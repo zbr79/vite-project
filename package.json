@@ -1,7 +1,7 @@
 {
   "homepage":"https://zbr79.github.io/vite-project/",
   "name": "vite-project",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

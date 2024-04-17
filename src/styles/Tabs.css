@@ -1,10 +1,26 @@
-/* Ensures that the tabs stay at the top of the page and fill it horizontally */
+@media (max-width: 768px) {
+  .tab-buttons button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+
+  .recipe-card {
+    flex: 1 1 46%; /* Adjust for fewer cards per row on smaller screens */
+  }
+}
+body {
+  padding-top: 0;
+  margin-top: 0;
+}
+/* TABS */
+
 .tab-buttons {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height:5%;
+  height: 5%;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -12,13 +28,6 @@
   padding: 10px;
   border-bottom: 2px solid #e0e0e0;
   z-index: 1000; /* Keeps tabs on top of other content */
-
-}
-
-body {
-
-  padding-top: 0;
-  margin-top: 0;
 }
 
 .tab-buttons button {
@@ -46,23 +55,17 @@ body {
   transition: all 0.3s ease;
 }
 
-.tab-buttons button:hover::after {
+.tab-buttons button:hover::after, .tab-buttons button.active::after {
   width: 100%; /* Full width on hover, can adjust if needed */
   left: 0; /* Reset left to zero */
   background-color: #555;
 }
-
-.tab-buttons button.active::after {
-  width: 100%;
-  left: 0;
-  background-color: #007bff; /* Active color */
-}
-
-.catalog-buttons{
+/* CATALOGS */
+.catalog-buttons {
   position: absolute;
-  top:8%;
-  left:0;
-  right:0;
+  top: 8%;
+  left: 0;
+  right: 0;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -96,25 +99,38 @@ body {
   left: 0; /* Reset left to zero */
   background-color: #555; /* Hover and active color */
 }
-
-/* Style for an active button to maintain the underline */
-.catalog-buttons button.active::after {
-  background-color: #007bff; /* Change to match the active style if needed */
-}
-
-
-.recipe-buttons {
+/* CARDS */
+.recipe-cards {
   position: absolute;
-  top:30%;
-  left:0;
+  top: 20%; /* Adjusted top position to ensure it does not overlap with catalog buttons */
+  left: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px; /* Adds space between the cards */
 }
 
+.recipe-card {
+  flex: 1 1 21%; /* Example of setting flex-basis with a max of 5 cards per row */
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff; /* Light background color for better contrast */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+  border-radius: 10px; /* Rounded corners for modern look */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions for interaction */
+  overflow: hidden; /* Keeps everything contained within the rounded borders */
+}
 
-@media (max-width: 768px) {
-  .tab-buttons button {
-    padding: 8px 10px;
-    font-size: 14px;
-  }
+.recipe-card img {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #e0e0e0; /* Visual separation between image and text */
+  border-top-left-radius: 10px; /* Rounded top corners */
+  border-top-right-radius: 10px; /* Rounded top corners */
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Slight increase in size on hover for effect */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.1); /* Enhanced shadow on hover for more depth */
 }

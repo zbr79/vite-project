@@ -36,7 +36,7 @@
     },
     {
       "name": "Bibimbap",
-      "picture": "/public/recipes/korean/bibimbap.png",
+      "picture": "korean-tofu-soup.jpg",
       "sections": [
         {
           "title": "Ingredients",
@@ -64,7 +64,37 @@
     },
     {
       "name": "Tteokbokki",
-      "picture": "/public/recipes/korean/tteokbokki.png",
+      "picture": "korean-tofu-soup.jpg",
+      "sections": [
+        {
+          "title": "Ingredients",
+          "items": [
+            { "name": "Rice Cakes", "amount": "2 cups" },
+            { "name": "Fish Cake", "amount": "1 cup, sliced" },
+            { "name": "Gochujang", "amount": "3 tablespoons" },
+            { "name": "Sugar", "amount": "1 tablespoon" },
+            { "name": "Green Onion", "amount": "1/4 cup, chopped" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "description": "Boil the rice cakes until soft, then drain."
+        },
+        {
+          "description": "In a pan, mix gochujang, sugar, and a bit of water to make the sauce."
+        },
+        {
+          "description": "Add rice cakes and fish cake to the sauce, cooking until the sauce thickens."
+        },
+        {
+          "description": "Garnish with green onions and serve hot."
+        }
+      ]
+    },
+    {
+      "name": "Tteokbokki",
+      "picture": "korean-tofu-soup.jpg",
       "sections": [
         {
           "title": "Ingredients",
@@ -92,5 +122,7 @@
         }
       ]
     }
+
+    
   ]
 }

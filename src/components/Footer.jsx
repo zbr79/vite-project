@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="app-footer">
       <div>Website under development</div>
-      <div>Last updated date: 4/15/2024</div>
+      <div>Last updated date: 4/16/2024</div>
     </footer>
   );
 };

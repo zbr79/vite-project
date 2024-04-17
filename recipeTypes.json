@@ -1,0 +1,50 @@
+[
+  {
+    "typeName": "推荐",
+    "catalogs": [
+      "最新",
+      "热门"
+
+    ]
+  },
+    {
+      "typeName": "中餐",
+      "catalogs": [
+        "粤菜",
+        "潮汕",
+        "川湘",
+        "东北"
+
+      ]
+    },
+    {
+      "typeName": "Asia",
+      "catalogs": [
+        "Japnese",
+        "Korean",
+        "越南"
+
+      ]
+    },
+    {
+      "typeName": "欧美",
+      "catalogs": [
+        "？？",
+        "？？",
+        "？？",
+        "？？"
+
+      ]
+    },
+    {
+        "typeName": "额外",
+        "catalogs": [
+          "？？",
+          "？？",
+          "？？",
+          "？？"
+
+        ]
+      }
+  ]
+  

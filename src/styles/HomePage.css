@@ -1,25 +1,32 @@
 /* For very small devices (phones) */
+
+.HomePage {
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: red;  
+}
+
 @media (max-width: 450px) {
-  .container {
+  .HomePage {
       min-width: 320px;
+      background-color: pink;
   }
 }
 
 /* For medium range devices (tablets, low-resolution desktops) */
 @media (min-width: 451px) and (max-width: 1440px) {
-  .container {
+  .HomePage {
       min-height: 100vh;
+      background-color: red;  
   }
 }
 
 /* For larger screens (high-resolution desktops) */
 @media (min-width: 1441px) {
-  .container {
+  .HomePage {
       max-width: 1600px; 
+      background-color: purple;  
   }
 }
-
-.body {
-  background-color: aqua;  
-}
-

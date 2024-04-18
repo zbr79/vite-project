@@ -14,6 +14,7 @@ function HomePage() {
     return (
         <div className='HomePage'>
 
+
             {/* <Header /> */}
             <Tabs />
             {/* <Footer /> */}

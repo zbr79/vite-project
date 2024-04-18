@@ -1,40 +1,31 @@
+
 /* Catalogs.css */
 .catalog-buttons {
-    position: absolute;
-    top: 8%;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-  }
-  
-  .catalog-buttons button {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    padding: 8px 16px;
-    background-color: #f8f8f8;
-    cursor: pointer;
-    margin-right: 5px;
-    overflow: hidden; /* Ensures no overflow of the pseudo-element */
-    border-radius: 0px;
-    background-color: white;
-  }
-  
-  .catalog-buttons button::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Aligns just below the button text */
-    left: 50%; /* Start from the center */
-    width: 0%; /* Start with no width */
-    height: 6px;
-    background-color: transparent;
-    transition: all 0.3s ease; /* Smooth transition for appearing and disappearing */
-  }
-  
-  .catalog-buttons button:hover::after, .catalog-buttons button.active::after {
-    width: 100%; /* Full width on hover and active */
-    left: 0; /* Reset left to zero */
-    background-color: #555; /* Hover and active color */
-  }
-  
+
+  min-height:8vh;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.catalog-buttons button {
+  min-height:5vh;
+  align-self: center;
+  flex-grow: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+
+.catalog-buttons button.active {
+  background-color: pink; /* Change background color when active */
+}

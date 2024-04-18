@@ -1,8 +1,6 @@
 /* RecipeCards.css */
 .recipe-cards {
-    position: absolute;
-    top: 20%; /* Adjusted top position to ensure it does not overlap with catalog buttons */
-    left: 0;
+
     display: flex;
     flex-wrap: wrap;
     padding: 10px;

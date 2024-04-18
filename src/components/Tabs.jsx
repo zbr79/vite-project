@@ -80,7 +80,9 @@ const Tabs = () => {
 
   return (
     <div>
+
       <TypesTabs tabData={tabData} activeTab={activeTab} selectTab={selectTab} />
+
       <CatalogTabs activeCatalogs={activeCatalogs} loadRecipesForCatalog={loadRecipesForCatalog} />
       <RecipeCards recipes={recipes} />
     </div>

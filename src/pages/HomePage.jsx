@@ -12,7 +12,7 @@ import Tabs from '../components/Tabs.jsx';
 function HomePage() {
 
     return (
-        <div>
+        <div className='HomePage'>
 
             {/* <Header /> */}
             <Tabs />

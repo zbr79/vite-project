@@ -1,32 +1,25 @@
-/* For very small devices (phones) */
-
+/* Base styles for mobile-first design */
 .HomePage {
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: red;  
+  background-color: pink; /* Assume mobile devices initially */
 }
 
-@media (max-width: 450px) {
-  .HomePage {
-      min-width: 320px;
-      background-color: pink;
-  }
-}
-
-/* For medium range devices (tablets, low-resolution desktops) */
+/* Override styles for medium devices (tablets and low-resolution desktops) */
 @media (min-width: 451px) and (max-width: 1440px) {
   .HomePage {
-      min-height: 100vh;
-      background-color: red;  
+    background-color: red;
+    min-height: 100vh; /* Ensures full screen height */
   }
 }
 
-/* For larger screens (high-resolution desktops) */
+/* Override styles for larger screens (high-resolution desktops) */
 @media (min-width: 1441px) {
   .HomePage {
-      max-width: 1600px; 
-      background-color: purple;  
+    max-width: 1600px;
+    background-color: purple;
+    margin: 0 auto; /* Centers the layout when max-width is less than the screen width */
   }
 }

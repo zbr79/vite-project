@@ -14,7 +14,7 @@ function HomePage() {
         <div>
             {/* <Header /> */}
             <Tabs />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

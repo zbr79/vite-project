@@ -1,0 +1,54 @@
+/* Types.css */
+.tab-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    z-index: 1000; /* Keeps tabs on top of other content */
+  }
+  
+  .tab-buttons button {
+    flex-grow: 1;
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden; /* Ensures no overflow of the pseudo-element */
+    border-radius: 0px;
+  }
+  
+  .tab-buttons button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Aligns just below the button text */
+    left: 50%; /* Start from the center */
+    width: 0%; /* Start with no width */
+    height: 6px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-buttons button:hover::after, .tab-buttons button.active::after {
+    width: 100%; /* Full width on hover, can adjust if needed */
+    left: 0; /* Reset left to zero */
+    background-color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .tab-buttons button {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+/* Catalogs.css */
+.catalog-buttons {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+  }
+  
+  .catalog-buttons button {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    padding: 8px 16px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-right: 5px;
+    overflow: hidden; /* Ensures no overflow of the pseudo-element */
+    border-radius: 0px;
+    background-color: white;
+  }
+  
+  .catalog-buttons button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Aligns just below the button text */
+    left: 50%; /* Start from the center */
+    width: 0%; /* Start with no width */
+    height: 6px;
+    background-color: transparent;
+    transition: all 0.3s ease; /* Smooth transition for appearing and disappearing */
+  }
+  
+  .catalog-buttons button:hover::after, .catalog-buttons button.active::after {
+    width: 100%; /* Full width on hover and active */
+    left: 0; /* Reset left to zero */
+    background-color: #555; /* Hover and active color */
+  }
+  

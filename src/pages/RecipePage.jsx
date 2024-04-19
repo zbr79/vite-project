@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/Recipe.css'; // Ensure this path matches the location of your CSS file
 
+import RecipeInfo from '../components/Recipe/RecipeInfo';
+
 const RecipePage = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,12 +25,9 @@ const RecipePage = () => {
   return (
     <div className="recipe-page">
       <button onClick={goBack} className="back-button">Back</button>
-      <div className="recipe-header">
-        <img src={recipe.picture} alt={recipe.name} className="recipe-image" />
-        <h1 className="recipe-title-page">{recipe.name}</h1>
-        {/* Displaying the number of servings below the recipe name */}
-        <p className="recipe-servings">{recipe.servings}人份</p>
-      </div>
+
+      <RecipeInfo recipe ={recipe}/>
+
       
       <div className="recipe-body">
         {recipe.sections && recipe.sections.map((section, index) => (

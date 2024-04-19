@@ -1,40 +1,28 @@
 /* RecipeCards.css */
 .recipe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px; /* Adds space between the cards */
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 20px; /* Adds space between the cards */
-  }
-  
-  .recipe-card {
-    flex: 1 1 21%; /* Example of setting flex-basis with a max of 5 cards per row */
-    margin: 10px;
-    padding: 10px;
-    background-color: #fff; /* Light background color for better contrast */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
-    border-radius: 10px; /* Rounded corners for modern look */
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions for interaction */
-    overflow: hidden; /* Keeps everything contained within the rounded borders */
-  }
-  
-  .recipe-card img {
-    width: 100%; /* Full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    border-bottom: 1px solid #e0e0e0; /* Visual separation between image and text */
-    border-top-left-radius: 10px; /* Rounded top corners */
-    border-top-right-radius: 10px; /* Rounded top corners */
-  }
-  
-  .recipe-card:hover {
-    transform: scale(1.05); /* Slight increase in size on hover for effect */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.1); /* Enhanced shadow on hover for more depth */
-  }
-  
-  @media (max-width: 768px) {
-    .recipe-card {
-      flex: 1 1 46%; /* Adjust for fewer cards per row on smaller screens */
-    }
-  }
-  
+.recipe-card {
+  flex: 0 0 calc(45% - 40px); /* Set exact width to ensure 2 cards per line, accounting for gap */
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff; /* Light background color for better contrast */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+  border-radius: 10px; /* Rounded corners for modern look */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions for interaction */
+  overflow: hidden; /* Keeps everything contained within the rounded borders */
+}
+
+.recipe-card img {
+  width: 100%; /* Full width of the card */
+  min-height: 80%;
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #e0e0e0; /* Visual separation between image and text */
+  border-top-left-radius: 10px; /* Rounded top corners */
+  border-top-right-radius: 10px; /* Rounded top corners */
+}

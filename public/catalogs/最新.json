@@ -1,39 +1,53 @@
 {
   "recipes": [
     {
-      "name": "Kimchi Fried Rice",
-      "picture": "korean-tofu-soup.jpg",
+      "name": "泡菜炒饭",
+      "picture": "./img/泡菜炒饭.jpg",
+      "servings": "2", 
       "sections": [
         {
-          "title": "Ingredients",
+          "title": "材料",
           "items": [
-            { "name": "Oil", "amount": "2 tablespoons" },
-            { "name": "Kimchi", "amount": "1 cup, chopped" },
-            { "name": "Rice", "amount": "2 cups, cooked" },
-            { "name": "Green Onions", "amount": "1/4 cup, sliced" },
-            { "name": "Soy Sauce", "amount": "2 tablespoons" }
+            { "name": "培根", "amount": "60g，剪成小段" },
+            { "name": "泡菜", "amount": "100g" },
+            { "name": "米饭", "amount": "210G，隔夜饭/水米0.9比1" },
+           
+            { "name": "鸡蛋", "amount": "2个，炒散" },
+            { "name": "紫菜", "amount": "少许，打碎" }
+          ]
+        },
+        {
+          "title": "酱料",
+          "items": [
+            { "name": "韩国辣椒粉", "amount": "7.5g" },
+            { "name": "生抽", "amount": "7.5ml" },
+            { "name": "耗油", "amount": "7.5g" },
+            { "name": "糖", "amount": "3g" }
           ]
         }
       ],
       "steps": [
         {
-          "description": "Heat oil in a large skillet over medium heat.",
-          "picture": "korean-tofu-soup.jpg"
+          "description": "将酱汁和泡菜拌均匀"
         },
         {
-          "description": "Add kimchi and cook until fragrant."
+          "description": "起锅热锅热油倒入鸡蛋液，略微凝固之后搅散，炒熟后倒出备用"
         },
         {
-          "description": "Mix in the rice, ensuring it's well coated with kimchi flavor."
+          "description": "重新起锅爆香培根和葱，加入泡菜酱汁炒香，加入饭和鸡蛋炒均匀"
         },
         {
-          "description": "Stir in green onions and soy sauce, cooking until everything is heated through."
-        },
-        {
-          "description": "Serve hot, garnished with additional green onions if desired."
+          "description": "出锅，加碎紫菜",
+          "picture": "./img/泡菜炒饭.jpg"
         }
       ]
     },
+
+
+
+
+
+
     {
       "name": "Bibimbap",
       "picture": "korean-tofu-soup.jpg",

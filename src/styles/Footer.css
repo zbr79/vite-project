@@ -1,24 +1,11 @@
-/* Footer styles to ensure it sticks to the bottom and looks appealing */
-html, body {
-  height: 100%; /* Ensures the full height of the browser window is usable */
-  margin: 0; /* Removes default browser margins */
-  display: flex;
-  flex-direction: column; /* Stacks content vertically */
-}
-
 .app-footer {
-  margin-top: auto; /* Pushes the footer to the bottom of the flex container (body) */
   width: 100%; /* Ensures the footer extends full width */
-  background-color: #333; /* Dark background for the footer */
-  color: white; /* Light text for contrast */
+  background-color: #333; /* Sets a dark background for the footer for contrast */
+  color: white; /* Sets the text color to white for visibility against the dark background */
   text-align: center; /* Centers the text within the footer */
-  padding: 20px 0; /* Adds padding above and below the text */
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Subtle shadow above the footer */
-}
-
-/* Responsive adjustments if needed */
-@media (max-width: 768px) {
-  .app-footer {
-    padding: 10px 0; /* Less padding on smaller screens */
-  }
+  padding: 20px 0; /* Adds vertical padding for better spacing */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow above the footer for a slight 3D effect */
+  position: absolute; /* Positions the footer at the absolute bottom */
+  bottom: 0; /* Aligns the footer to the bottom edge of its nearest positioned ancestor */
+  left: 0; /* Ensures it aligns to the left edge, covering the full width */
 }

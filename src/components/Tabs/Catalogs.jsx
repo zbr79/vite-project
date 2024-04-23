@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import '../../styles/Tabs/Catalogs.css'; 
+import React from 'react';
+import '../../styles/Tabs/Catalogs.css'; // Ensure the correct path to the CSS file
 
-const CatalogTabs = ({ activeCatalogs, loadRecipesForCatalog }) => {
-  const [activeCatalog, setActiveCatalog] = useState(null);
-
-  const handleCatalogClick = (catalog) => {
-    setActiveCatalog(catalog); // Set the active catalog
-    loadRecipesForCatalog(catalog); // Load the recipes for the clicked catalog
-  };
+const CatalogTabs = ({ catalogs, activeCatalog, setActiveCatalog, loadRecipesForCatalog }) => {
+  if (!Array.isArray(catalogs)) {
+    console.error('Catalogs should be an array, received:', catalogs);
+    return <div>No catalogs available.</div>; // Fallback UI
+  }
 
   return (
-    <div className="catalog-buttons">
-      {activeCatalogs.map((catalog, index) => (
-        <button 
-          key={index} 
-          onClick={() => handleCatalogClick(catalog)}
+    <div className="catalog-buttons"> {/* Make sure this class name matches the CSS container class */}
+      {catalogs.map((catalog, index) => (
+        <button
+          key={index}
           className={catalog === activeCatalog ? 'active' : ''}
+          onClick={() => {
+            setActiveCatalog(catalog);
+            loadRecipesForCatalog(catalog);
+          }}
         >
           {catalog}
         </button>

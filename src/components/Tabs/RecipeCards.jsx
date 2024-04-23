@@ -18,7 +18,7 @@ const RecipeCards = ({ recipes }) => {
     // Hide the message after 3 seconds
     const newTimeoutId = setTimeout(() => {
       setShowMessage(false);
-    }, 3000);
+    }, 1000);
 
     setTimeoutId(newTimeoutId);
   };

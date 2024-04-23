@@ -4,9 +4,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1vw;  /* Using vw for padding to scale with the viewport */
-  background-color: #282c34;
+  background-color: orange;
   color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height:10vh;
 }
 
 .app-header > div, .app-header > h1 {
@@ -17,12 +18,32 @@
 
 .main-logo {
   flex: 2; /* Logo gets more emphasis */
-  font-size: 4vw; /* Adjusting font size based on viewport width */
+  display: flex; /* Ensures the logo is centered */
+  justify-content: center; /* Centers the logo horizontally */
+  align-items: center; /* Centers the logo vertically */
+  width:60%;
+  /* border:2px solid red; */
+}
+
+.main-logo img {
+  min-height: 50px; /* Limits the height of the logo */
+  width: auto; /* Ensures the width adjusts based on the height to maintain aspect ratio */
+  max-width: 100%; /* Prevents the logo from exceeding the width of its container */
 }
 
 .menu-log, .search-logo {
-  cursor: pointer; /* Suggests interactivity */
-  font-size: 3vw; /* Scaling font size using vw */
+  display: flex;
+  width:10%;
+  height: 50%;
+  /* border:2px solid red; */
+  justify-content: center; /* Centers the logo horizontally */
+  align-items: center; /* Centers the logo vertically */
+}
+
+.menu-log img, .search-logo img {
+
+  height: 100%;
+
 }
 
 /* Responsive design adjustments using a viewport width threshold */

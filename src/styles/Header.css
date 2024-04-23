@@ -1,26 +1,39 @@
+/* Header.css */
 .app-header {
-  position:absolute;
-  top:0;
-  left:0;
-  width:101vw;
-  height:10vh;
-  z-index: 1000;
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out the children evenly */
-  align-items: center; /* Align items vertically in the center */
-  padding: 0 20px; /* Add some padding on the sides */
-  background-color: #282c34; /* Example background color */
-  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;  /* Using vw for padding to scale with the viewport */
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.menu-log, .main-logo, .search-logo {
-  text-align: center; /* Center text within each section */
-}
-
-.menu-log, .search-logo {
-  flex: 1; /* Take up 25% of the space */
+.app-header > div, .app-header > h1 {
+  text-align: center;
+  font-weight: normal;
+  padding: 1vw; /* Consistent padding in vw units */
 }
 
 .main-logo {
-  flex: 2; /* Take up 50% of the space */
+  flex: 2; /* Logo gets more emphasis */
+  font-size: 4vw; /* Adjusting font size based on viewport width */
+}
+
+.menu-log, .search-logo {
+  cursor: pointer; /* Suggests interactivity */
+  font-size: 3vw; /* Scaling font size using vw */
+}
+
+/* Responsive design adjustments using a viewport width threshold */
+@media (max-width: 48vw) { /* Adjusting the breakpoint using vw instead of fixed px */
+  .app-header {
+    flex-direction: column;
+  }
+
+  .main-logo, .menu-log, .search-logo {
+    flex: none; /* Removes flex-grow settings */
+    margin: 1vw 0; /* Adds vertical spacing in mobile view */
+    width: 100%; /* Full width for better tap targets */
+  }
 }

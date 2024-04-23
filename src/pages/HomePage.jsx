@@ -15,9 +15,9 @@ function HomePage() {
         <div className='HomePage'>
 
 
-            {/* <Header /> */}
+            <Header />
             <Tabs />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

@@ -1,0 +1,23 @@
+.recipe-steps {
+    margin-top: 30px;
+  }
+  
+  .recipe-steps h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .recipe-steps ol {
+    padding-left: 20px;
+  }
+  
+  .recipe-steps li {
+    margin-bottom: 15px;
+  }
+  
+  .step-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }

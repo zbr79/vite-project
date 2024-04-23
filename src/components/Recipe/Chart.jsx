@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../../styles/RecipeComponents/Chart.css'; 
 const RecipeChart = ({recipe}) => {
     return(
 

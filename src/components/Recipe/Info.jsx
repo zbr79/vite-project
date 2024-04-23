@@ -1,4 +1,5 @@
 import React from "react";
+import '../../styles/RecipeComponents/Info.css'; // Ensure the correct path to the CSS file
 
 const RecipeInfo = ({recipe}) => {
     return(

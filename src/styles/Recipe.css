@@ -20,81 +20,6 @@
   transition: background-color 0.3s ease;
 }
 
-.back-button:hover {
-  background-color: #e55330;
-}
-
-.no-recipe {
-  text-align: center;
-  font-size: 18px;
-}
-
-/* Header styles including the recipe image */
-.recipe-header h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.recipe-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: px;
-  
-}
-
-/* Styles for recipe sections */
-.section {
-  margin-top: 20px;
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.section h2 {
-  font-size: 20px;
-  color: #555;
-}
-
-.ingredients-table {
-  width: 100%;
-  margin-top: 10px;
-  border-collapse: collapse;
-}
-
-.ingredients-table td {
-  padding: 8px;
-  border-bottom: 1px solid #eee;
-}
-
-/* Styles for the steps section */
-.recipe-steps {
-  margin-top: 30px;
-}
-
-.recipe-steps h2 {
-  font-size: 20px;
-  color: #333;
-}
-
-.recipe-steps ol {
-  padding-left: 20px;
-}
-
-.recipe-steps li {
-  margin-bottom: 15px;
-}
-
-.step-image {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-/* Media query for responsiveness */
 @media (max-width: 768px) {
   .recipe-header h1, .section h2, .recipe-steps h2 {
     font-size: 18px;
@@ -109,20 +34,6 @@
   }
 }
 
-
-.recipe-title-page {
-  font-size: 28px;
-  color: #333;
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Adjust the .recipe-header to better accommodate the title */
-.recipe-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
 
 /* Responsive adjustment for the recipe title page */
 @media (max-width: 768px) {

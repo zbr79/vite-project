@@ -1,0 +1,23 @@
+.section {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .section h2 {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .ingredients-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+  
+  .ingredients-table td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }

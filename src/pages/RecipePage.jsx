@@ -2,9 +2,9 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/Recipe.css'; // Ensure this path matches the location of your CSS file
 
-import RecipeInfo from '../components/Recipe/RecipeInfo';
+import RecipeInfo from '../components/Recipe/Info.jsx';
 
-import RecipeChart from '../components/Recipe/RecipeChart';
+import RecipeChart from '../components/Recipe/Chart.jsx';
 import RecipeSteps from '../components/Recipe/Steps';
 
 import Header from '../components/Header.jsx';

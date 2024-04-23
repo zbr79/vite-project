@@ -1,0 +1,29 @@
+
+.recipe-title-page {
+    font-size: 28px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Adjust the .recipe-header to better accommodate the title */
+  .recipe-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+
+.recipe-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: px;
+    
+  }

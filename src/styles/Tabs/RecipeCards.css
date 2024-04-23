@@ -2,27 +2,28 @@
 .recipe-cards {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
-  gap: 20px; /* Adds space between the cards */
+  /* border:2px solid red; */
+  justify-content: space-evenly;
+
 }
 
 .recipe-card {
-  flex: 0 0 calc(45% - 40px); /* Set exact width to ensure 2 cards per line, accounting for gap */
-  margin: 10px;
+  flex: 0 0 39%; /* Set exact width to ensure 2 cards per line, accounting for gap */
+
   padding: 10px;
   background-color: #fff; /* Light background color for better contrast */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
   border-radius: 10px; /* Rounded corners for modern look */
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions for interaction */
-  overflow: hidden; /* Keeps everything contained within the rounded borders */
+  margin-bottom: 5%;
+
 }
 
 .recipe-card img {
-  width: 100%; /* Full width of the card */
-  min-height: 80%;
-  height: auto; /* Maintain aspect ratio */
-  border-bottom: 1px solid #e0e0e0; /* Visual separation between image and text */
-  border-top-left-radius: 10px; /* Rounded top corners */
-  border-top-right-radius: 10px; /* Rounded top corners */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Sets a 16:9 aspect ratio */
+  object-fit: cover;
+  object-position: center; /* Ensures the center of the image is always shown */
+  border-bottom: 1px solid #e0e0e0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

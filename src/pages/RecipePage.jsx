@@ -4,6 +4,12 @@ import '../styles/Recipe.css'; // Ensure this path matches the location of your 
 
 import RecipeInfo from '../components/Recipe/RecipeInfo';
 
+import RecipeChart from '../components/Recipe/RecipeChart';
+import RecipeSteps from '../components/Recipe/Steps';
+
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+
 const RecipePage = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,42 +29,25 @@ const RecipePage = () => {
   }
 
   return (
+
+
     <div className="recipe-page">
+      <Header />
       <button onClick={goBack} className="back-button">Back</button>
 
       <RecipeInfo recipe ={recipe}/>
+      
+      <RecipeChart recipe ={recipe}/>
+      <RecipeSteps recipe ={recipe}/>
+
+      <Footer />
 
       
-      <div className="recipe-body">
-        {recipe.sections && recipe.sections.map((section, index) => (
-          <div key={index} className="section">
-            <h2>{section.title}</h2>
-            <table className="ingredients-table">
-              <tbody>
-                {section.items.map((item, itemIndex) => (
-                  <tr key={itemIndex}>
-                    <td>{item.name}</td>
-                    <td>{item.amount}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ))}
-        
-        <div className="recipe-steps">
-          <h2>Steps:</h2>
-          <ol>
-            {recipe.steps && recipe.steps.map((step, stepIndex) => (
-              <li key={stepIndex}>
-                <p>{step.description}</p>
-                {step.picture && <img src={step.picture} alt={`Step ${stepIndex + 1}`} className="step-image" />}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </div>
     </div>
+
+
+
+
   );
 };
 

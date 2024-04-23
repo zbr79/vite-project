@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../styles/Recipe.css'; // Ensure this path matches the location of your CSS file
+import '../styles/RecipePage.css'; // Ensure this path matches the location of your CSS file
 
 import RecipeInfo from '../components/Recipe/Info.jsx';
 
@@ -32,6 +32,7 @@ const RecipePage = () => {
 
 
     <div className="recipe-page">
+      
       <Header />
       <button onClick={goBack} className="back-button">Back</button>
 

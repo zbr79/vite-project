@@ -8,7 +8,7 @@ const CatalogTabs = ({ catalogs, activeCatalog, setActiveCatalog, loadRecipesFor
   }
 
   return (
-    <div className="catalog-section"> {/* Make sure this class name matches the CSS container class */}
+    <div className="catalog-section"> 
       {catalogs.map((catalog, index) => (
         <button
           key={index}
@@ -18,7 +18,7 @@ const CatalogTabs = ({ catalogs, activeCatalog, setActiveCatalog, loadRecipesFor
             loadRecipesForCatalog(catalog);
           }}
         >
-          {catalog}
+          <span className="catalog-name">{catalog}</span>
         </button>
       ))}
     </div>

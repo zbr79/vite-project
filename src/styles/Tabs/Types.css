@@ -30,6 +30,14 @@
 }
 
 .type-section button.active {
-  background-color: pink; /* Change background color when active */
+  /* background-color: pink;  */
   font-weight: bold;
+  pointer-events: none; 
+  color: blue;
+  
+}
+
+.type-section button.active .type-name{
+  padding-bottom: 3px;
+  border-bottom: 3px solid blue;
 }

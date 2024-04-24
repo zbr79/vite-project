@@ -8,7 +8,7 @@ const TypesTabs = ({ tabData, activeTab, selectTab }) => {
       {tabData.map(({ typeName, catalogs }) => (
         <button key={typeName} onClick={() => selectTab(typeName, catalogs)}
           className={typeName === activeTab ? 'active' : ''}>
-          {typeName}
+                <span className="type-name">{typeName}</span>
         </button>
       ))}
     </div>

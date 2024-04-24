@@ -27,4 +27,5 @@
   background-color: pink; /* Slight pink background on hover and when active */
   color: #333; /* Darker text color for better contrast */
   font-weight: bold;
+  pointer-events: none; 
 }

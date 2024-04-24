@@ -1,7 +1,7 @@
 /* Catalogs.css */
 .catalog-section {
   width:100%;
-  min-height:8vh;
+  min-height:6vh;
   display: flex;
   justify-content: left;
   align-items: center; /* Ensure buttons are centered vertically */
@@ -24,8 +24,13 @@
 
  
 .catalog-section button.active {
-  background-color: pink; /* Slight pink background on hover and when active */
   color: #333; /* Darker text color for better contrast */
   font-weight: bold;
   pointer-events: none; 
+  color: blue;
+}
+
+.catalog-section button.active .catalog-name{
+  padding-bottom: 3px;
+  border-bottom: 3px solid blue;
 }

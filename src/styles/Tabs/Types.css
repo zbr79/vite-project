@@ -8,6 +8,8 @@
 
     display: flex;
     justify-content: left;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     
   }
   
@@ -34,6 +36,8 @@
   font-weight: bold;
   pointer-events: none; 
   color: blue;
+
+  outline:none; /* note: this removes border when active */
   
 }
 

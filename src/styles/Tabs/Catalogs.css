@@ -1,5 +1,6 @@
 /* Catalogs.css */
 .catalog-section {
+
   width:100%;
   min-height:6vh;
   display: flex;
@@ -7,19 +8,24 @@
   align-items: center; /* Ensure buttons are centered vertically */
   width: 100%;
   background-color: white;
-  border-bottom: 2px solid #e0e0e0;
 
 
   margin-bottom: 2%;
 }
 
 .catalog-section button {
-  min-height:5vh;
-  width: 20vw;
+  min-height:3vh;
+  border-radius: 3px;
+  /* width: 20vw; */
   font-size: min(4vw,4vh); /* Responsive font size that adjusts with the viewport */
   text-align: center;
-  background-color: transparent;
+
+  background-color: white;
+
+
   transition: all 0.3s ease; /* Smooth transition for all properties */
+  margin:1%;
+
 }
 
  
@@ -28,9 +34,7 @@
   font-weight: bold;
   pointer-events: none; 
   color: blue;
-}
-
-.catalog-section button.active .catalog-name{
-  padding-bottom: 3px;
-  border-bottom: 3px solid blue;
+  outline:none; 
+  border: none;
+  background-color: rgb(103, 250, 255);
 }

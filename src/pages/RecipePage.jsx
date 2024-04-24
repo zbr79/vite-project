@@ -34,14 +34,14 @@ const RecipePage = () => {
     <div className="recipe-page">
       
       <Header />
-      <button onClick={goBack} className="back-button">Back</button>
+      {/* <button onClick={goBack} className="back-button">Back</button> */}
 
       <RecipeInfo recipe ={recipe}/>
       
       <RecipeChart recipe ={recipe}/>
       <RecipeSteps recipe ={recipe}/>
 
-      <Footer />
+      {/* <Footer /> */}
 
       
     </div>

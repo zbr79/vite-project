@@ -8,6 +8,7 @@
   color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   height:10vh;
+  margin-bottom: 2%;;
 }
 
 .app-header > div, .app-header > h1 {
@@ -26,7 +27,7 @@
 }
 
 .main-logo img {
-  min-height: 50px; /* Limits the height of the logo */
+  min-height: 40px; /* Limits the height of the logo */
   width: auto; /* Ensures the width adjusts based on the height to maintain aspect ratio */
   max-width: 100%; /* Prevents the logo from exceeding the width of its container */
 }
@@ -34,7 +35,7 @@
 .menu-log, .search-logo {
   display: flex;
   width:10%;
-  height: 50%;
+  height: 40%;
   /* border:2px solid red; */
   justify-content: center; /* Centers the logo horizontally */
   align-items: center; /* Centers the logo vertically */

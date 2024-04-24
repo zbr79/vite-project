@@ -26,6 +26,8 @@
 
   align-items: center;
 
+  outline:none; /* note: this removes border when active */
+
 
   background-color: transparent;
   transition: background-color 0.3s ease; /* Smooth transition for background color change */

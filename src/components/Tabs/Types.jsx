@@ -4,7 +4,7 @@ import '../../styles/Tabs/Types.css';
 
 const TypesTabs = ({ tabData, activeTab, selectTab }) => {
   return (
-    <div className="tab-buttons">
+    <div className="type-section">
       {tabData.map(({ typeName, catalogs }) => (
         <button key={typeName} onClick={() => selectTab(typeName, catalogs)}
           className={typeName === activeTab ? 'active' : ''}>

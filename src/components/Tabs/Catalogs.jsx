@@ -8,7 +8,7 @@ const CatalogTabs = ({ catalogs, activeCatalog, setActiveCatalog, loadRecipesFor
   }
 
   return (
-    <div className="catalog-buttons"> {/* Make sure this class name matches the CSS container class */}
+    <div className="catalog-section"> {/* Make sure this class name matches the CSS container class */}
       {catalogs.map((catalog, index) => (
         <button
           key={index}

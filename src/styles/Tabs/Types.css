@@ -1,31 +1,35 @@
 /* Types.css */
-.tab-buttons {
+.type-section {
 
     min-height:8vh;
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     background-color: white;
     border-bottom: 2px solid #e0e0e0;
 
+    display: flex;
+    justify-content: left;
+    
   }
   
   /* Types.css */
-.tab-buttons button {
+.type-section button {
   min-height:5vh;
+  width: 10vw;
+  /* border:2px solid red; */
   align-self: center;
   flex-grow: 1;
-  padding: 10px 20px;
-  font-size: 16px;
+
+  font-size: min(4vw,4vh);
   text-align: center;
+
+  align-items: center;
+
+
   background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
   transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
-.tab-buttons button.active {
+.type-section button.active {
   background-color: pink; /* Change background color when active */
+  font-weight: bold;
 }

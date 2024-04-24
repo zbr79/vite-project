@@ -49,30 +49,66 @@
 
 
     {
-      "name": "Bibimbap",
-      "picture": "korean-tofu-soup.jpg",
+      "name": "午餐鸡肉蔬菜饭",
+      "picture": "./img/午餐鸡肉蔬菜饭.png",
+      "servings": "5", 
       "sections": [
         {
-          "title": "Ingredients",
+          "title": "鸡肉",
           "items": [
-            { "name": "Rice", "amount": "2 cups, cooked" },
-            { "name": "Carrot", "amount": "1, julienned" },
-            { "name": "Spinach", "amount": "1 cup, blanched" },
-            { "name": "Zucchini", "amount": "1, thinly sliced" },
-            { "name": "Egg", "amount": "4, fried" }
+            { "name": "鸡腿肉", "amount": "750G" },
+            { "name": "洋葱粉", "amount": "5g" },
+            { "name": "蒜粉", "amount": "5g" },
+            { "name": "甜椒粉（Paprika）", "amount": "5g" },
+            { "name": "辣椒粉", "amount": "0.5g" },
+            { "name": "盐", "amount": "适量" },
+            { "name": "黑胡椒", "amount": "适量" },
+            { "name": "橄榄油", "amount": "20ml" }
+          ]
+        },
+        {
+          "title": "配菜",
+          "items": [
+            { "name": "番茄", "amount": "5个" },
+            { "name": "洋葱", "amount": "1个" },
+            { "name": "辣椒", "amount": "1个" },
+            { "name": "香菜", "amount": "10g" },
+            { "name": "绿柠檬汁", "amount": "1个" },
+            { "name": "盐", "amount": "适量" },
+            { "name": "黑胡椒", "amount": "适量" }
+          ]
+        },
+        {
+          "title": "柠檬牛油果",
+          "items": [
+            { "name": "牛油果", "amount": "2个，打成泥" },
+            { "name": "绿柠檬汁", "amount": "1个" }
+          ]
+        },
+        {
+          "title": "米饭和配酱",
+          "items": [
+            { "name": "米", "amount": "350g" },
+            { "name": "老酸奶", "amount": "适量" },
+            { "name": "辣椒酱", "amount": "适量" }
           ]
         }
       ],
       "steps": [
         {
-          "description": "Prepare all ingredients and place them on top of the cooked rice in sections.",
-          "picture": "/public/recipes/korean/steps/bibimbap/step1.png"
+          "description": "鸡肉保持大块加入腌料抓均，放入烤盘。放入已经热到190摄氏度的烤箱烤16分钟，拿出切小块"
         },
         {
-          "description": "Add a fried egg on top of each serving."
+          "description": "混合配菜，加入适量盐和胡椒，搅拌"
         },
         {
-          "description": "Serve with a side of gochujang (Korean chili paste) and mix everything together before eating."
+          "description": "打碎两个牛油果加入盐和柠檬汁，搅拌均匀"
+        },
+        {
+          "description": "组装：放适量米饭，放上鸡块，柠檬牛油果，老酸奶，配菜，再加上辣椒酱"
+        },
+        {
+          "description": "最多可保存4天/3个月"
         }
       ]
     },

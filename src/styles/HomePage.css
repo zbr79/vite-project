@@ -4,6 +4,8 @@
   color: #333;
   width: 100%;
   min-height:100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Override styles for medium devices (tablets and low-resolution desktops) */

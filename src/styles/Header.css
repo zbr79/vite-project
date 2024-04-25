@@ -1,28 +1,21 @@
 /* Header.css */
 .app-header {
+  padding-left: 5%;
+  padding-right:5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1vw;  /* Using vw for padding to scale with the viewport */
-  background-color: orange;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  height:10vh;
-  margin-bottom: 2%;;
+
+  background-color: rgb(255, 123, 0);
+  height:8vh;
 }
 
-.app-header > div, .app-header > h1 {
-  text-align: center;
-  font-weight: normal;
-  padding: 1vw; /* Consistent padding in vw units */
-}
 
 .main-logo {
-  flex: 2; /* Logo gets more emphasis */
   display: flex; /* Ensures the logo is centered */
   justify-content: center; /* Centers the logo horizontally */
   align-items: center; /* Centers the logo vertically */
-  width:60%;
+  min-width:80%;
   /* border:2px solid red; */
 }
 
@@ -34,7 +27,7 @@
 
 .menu-log, .search-logo {
   display: flex;
-  width:10%;
+  width:5%;
   height: 40%;
   /* border:2px solid red; */
   justify-content: center; /* Centers the logo horizontally */
@@ -47,15 +40,3 @@
 
 }
 
-/* Responsive design adjustments using a viewport width threshold */
-@media (max-width: 48vw) { /* Adjusting the breakpoint using vw instead of fixed px */
-  .app-header {
-    flex-direction: column;
-  }
-
-  .main-logo, .menu-log, .search-logo {
-    flex: none; /* Removes flex-grow settings */
-    margin: 1vw 0; /* Adds vertical spacing in mobile view */
-    width: 100%; /* Full width for better tap targets */
-  }
-}

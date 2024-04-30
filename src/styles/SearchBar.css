@@ -13,6 +13,7 @@ background-color: white;
   
   /* Style for the input field to make it easy to tap on mobile and aesthetically pleasing */
   input[type="text"] {
+    font-size: 16px;
     margin-top:2%;
     height:5vh;
 

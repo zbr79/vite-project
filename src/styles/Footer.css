@@ -1,11 +1,8 @@
 .app-footer {
-  width: 100%; /* Ensures the footer extends full width */
-  background-color: #333; /* Sets a dark background for the footer for contrast */
-  color: white; /* Sets the text color to white for visibility against the dark background */
-  text-align: center; /* Centers the text within the footer */
-  padding: 20px 0; /* Adds vertical padding for better spacing */
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow above the footer for a slight 3D effect */
-  position: absolute; /* Positions the footer at the absolute bottom */
-  bottom: 0; /* Aligns the footer to the bottom edge of its nearest positioned ancestor */
-  left: 0; /* Ensures it aligns to the left edge, covering the full width */
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }

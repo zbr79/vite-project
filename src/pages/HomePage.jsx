@@ -15,7 +15,7 @@ function HomePage() {
     return (
         <div className='HomePage'>
             <Header />
-            <SearchBar />
+            {/* <SearchBar /> */}
             
             <Tabs />
             <Footer />

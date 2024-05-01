@@ -113,37 +113,86 @@
       ]
     },
     {
-      "name": "C白切鸡",
-      "picture": "korean-tofu-soup.jpg",
+      "name": "Chicken Fajita",
+      "picture": "./img/Chicken-Fajita.png",
+      "servings": "5", 
       "sections": [
         {
-          "title": "Ingredients",
+          "title": "Fajitas",
           "items": [
-            { "name": "Rice Cakes", "amount": "2 cups" },
-            { "name": "Fish Cake", "amount": "1 cup, sliced" },
-            { "name": "Gochujang", "amount": "3 tablespoons" },
-            { "name": "Sugar", "amount": "1 tablespoon" },
-            { "name": "Green Onion", "amount": "1/4 cup, chopped" }
+            { "name": "鸡胸肉", "amount": "1100G" },
+            { "name": "彩椒", "amount": "2个大，红/黄" },
+            { "name": "牛至", "amount": "5G新鲜，或者2G干的" }
+          ]
+        },
+        {
+          "title": "Spices",
+          "items": [
+            { "name": "甜椒粉（Paprika）", "amount": "5G" },
+            { "name": "洋葱粉", "amount": "5G" },
+            { "name": "蒜粉", "amount": "5G" },
+            { "name": "辣椒粉", "amount": "1G" },
+            { "name": "玉米粉", "amount": "6G" },
+            { "name": "海盐", "amount": "适量" },
+            { "name": "洋葱", "amount": "1个，大的" }
+
+
+          ]
+        },
+        {
+          "title": "Guacamole",
+          "items": [
+            { "name": "牛油果", "amount": "1个" },
+            { "name": "红洋葱", "amount": "1/4个" },
+            { "name": "番茄", "amount": "1个" },
+            { "name": "墨西哥辣椒", "amount": "半个" },
+            { "name": "香菜", "amount": "5G" },
+            { "name": "绿柠檬汁", "amount": "半个" }
+
+          ]
+        },
+        {
+          "title": "Coriander Lime Black Beans",
+          "items": [
+            { "name": "蒜泥", "amount": "2个" },
+            { "name": "橄榄油", "amount": "20G" },
+            { "name": "墨西哥辣椒", "amount": "半个" },
+            { "name": "姜黄粉", "amount": "2.5G" },
+            { "name": "黑豆", "amount": "800G" },
+            { "name": "Chicken Stock", "amount": "180ML" },
+            { "name": "绿柠檬汁", "amount": "半个" },
+            { "name": "香菜", "amount": "10G" }
+
+
           ]
         }
       ],
       "steps": [
         {
-          "description": "Boil the rice cakes until soft, then drain."
+          "description": "配置粉料，洋葱和彩椒切条，放入一半的粉，搅拌均匀"
         },
         {
-          "description": "In a pan, mix gochujang, sugar, and a bit of water to make the sauce."
+          "description": "鸡肉蝴蝶式切开，切条，加入剩下的粉和牛至，搅拌均匀腌制"
         },
         {
-          "description": "Add rice cakes and fish cake to the sauce, cooking until the sauce thickens."
+          "description": "Guacamole：切洋葱，番茄，打碎牛油果，加入香菜和柠檬汁"
         },
         {
-          "description": "Garnish with green onions and serve hot."
+          "description": "黑豆：起锅烧油，加入半个辣椒，蒜泥，姜黄粉，海盐。搅拌45秒"
+        },
+        {
+          "description": "加入黑豆和鸡汤，搅拌煮开，改小火煮熟3分钟，压碎黑豆，继续煮1分钟。加入柠檬汁和香菜，搅拌均匀"
+        },
+        {
+          "description": "蔬菜鸡肉：蔬菜炒3分钟，加入鸡肉，炒10分钟"
+        },
+        {
+          "description": "组装,Guacamole 分开装"
         }
       ]
     },
     {
-      "name": "绿切鸡",
+      "name": "D绿切鸡",
       "picture": "korean-tofu-soup.jpg",
       "sections": [
         {

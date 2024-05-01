@@ -18,10 +18,10 @@
       ]
     },
     {
-      "typeName": "Asia",
+      "typeName": "亚洲",
       "catalogs": [
-        "Japnese",
-        "Korean",
+        "日本",
+        "韩国",
         "越南"
 
       ]
@@ -29,19 +29,18 @@
     {
       "typeName": "欧美",
       "catalogs": [
-        "？？",
-        "？？",
-        "？？",
-        "？？"
+        "欧洲",
+        "美式",
+        "墨西哥"
 
       ]
     },
     {
-        "typeName": "额外",
+        "typeName": "Meal Prep",
         "catalogs": [
-          "？？",
-          "？？",
-          "？？",
+          "饭",
+          "高热量",
+          "低热量",
           "？？"
 
         ]

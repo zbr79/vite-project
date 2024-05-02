@@ -1,45 +1,75 @@
 .app-header {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center; /* Center the main logo only */
   background-color: rgb(255, 123, 0);
   height: 10vh;
+  min-height: 45px; /* Minimum height to ensure visibility on smaller screens */
+  position: relative; /* Required for absolute positioning of children */
 }
 
-.main-logo, .search-bar {
+.main-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 70vw;  /* Restricting maximum width to ensure consistency */
-  border:2px solid blue;
+  z-index: 1; /* Ensures it's on top in case of overlap */
+  /* border: 3px solid blue; */
 }
 
-.main-logo img, .search-bar input {
-  height: auto;
-  max-height: 6vh;  /* Limiting height to a percentage of the viewport height */
-  width: 100%;  /* Ensures width is fully utilized within the flex container */
+.main-logo img {
+  height: auto; /* Maintains aspect ratio */
+  max-height: 50px; /* Limits the height, making it responsive */
+  max-width: 100%; /* Ensures the image does not overflow its container */
 }
 
-.menu-log, .search-logo {
-
-  border:2px solid green;
-  height: 5vh;
-  width: vw;
+/* Menu Logo Styles */
+.menu-log {
+  position: absolute;
+  left: 5%; /* Positions 5% from the left */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%); /* Fine-tunes vertical centering */
+  width: 30px; /* Fixed width for consistent logo size */
+  height: 30px;
 }
 
-.menu-log img, .search-logo img {
+.menu-log img {
   height: 100%;
   width: 100%;
-  border:2px solid purple;
+  /* border: 2px solid purple; */
 }
 
-.SearchBar-Section {
-  margin: 2vh 0;  /* Vertical margin based on viewport height */
+/* Search Logo Styles */
+.search-logo {
+  position: absolute;
+  right: 5%; /* Positions 5% from the right */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%); /* Fine-tunes vertical centering */
+  width: 30px; /* Fixed width for consistent logo size */
+  height: 30px;
+  z-index: 100;
+}
+
+.search-logo img {
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid purple; */
+}
+
+
+
+
+.search-bar {
+  position: absolute;
+  top:0;
+  height:50vh;
+  width:100%;
+  border:5px solid red;
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
+
 }
 
 input[type="text"] {
@@ -50,6 +80,7 @@ input[type="text"] {
   background-color: pink;
   color: black;
   padding: 0 2vw;  /* Padding based on viewport width */
+  border:2px solid red;
 }
 
 ul {

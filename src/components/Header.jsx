@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <header className="app-header">
-            <div className="menu-log" style={{ flex: 1 }}>
+            <div className="menu-log" style={{ flex: 1 }} onClick={() => navigate('/account')}>
                 <img src="./icons/menu.svg" alt="Menu" />
             </div>
             {!showSearch ? (

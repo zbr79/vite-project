@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/AccountPage.css';
 
-function AccountPage() {
+function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -14,7 +14,7 @@ function AccountPage() {
         const checkConnection = async () => {
             try {
                 // Make a test request to your backend's health check endpoint
-                await axios.get('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/health'); // Ensure the scheme is correct (http or https)
+                await axios.get('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/api/test'); // Ensure the scheme is correct (http or https)
                 setConnectionError('');
             } catch (err) {
                 setConnectionError('Failed to connect to the backend. Please check your server.');
@@ -39,15 +39,19 @@ function AccountPage() {
 
         // Backend interaction with Axios
         try {
-            const response = await axios.post('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/api/auth/register', { 
+            const response = await axios.post('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/api/auth/login', { 
                 username, 
                 password 
             });
 
+            console.log('Response status code:', response.status); // Log the status code
+
             if (response.status === 200) {
-                // Successful registration
+                // Successful login
+                // Store token in localStorage
+                localStorage.setItem('token', response.data.token);
                 // Set success message
-                setSuccess('Registration successful! Redirecting...');
+                setSuccess('Login successful! Redirecting...');
                 // Redirect the user to a different page
                 setTimeout(() => {
                     window.location.href = '/dashboard';
@@ -55,7 +59,8 @@ function AccountPage() {
             }
         } catch (error) {
             if (error.response) {
-                console.log('Response status code:', error.response.status);
+                console.log('Response status code:', error.response.status); // Log the status code
+                console.log('Response data:', error.response.data); // Log the response data
             
                 if (error.response.status === 401) {
                     setError('Invalid username or password.');
@@ -74,7 +79,7 @@ function AccountPage() {
 
     return (
         <div className="account-page">
-            <h2 className="account-page-title">Account Page</h2>
+            <h2 className="account-page-title">Login Page</h2>
             {connectionError && <p className="error-message">{connectionError}</p>}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -105,4 +110,4 @@ function AccountPage() {
     );
 }
 
-export default AccountPage;
+export default LoginPage;

@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const password = "ywj"; // Replace this with the password you want to hash
+const password = "ywjtest"; // Replace this with the password you want to hash
 const saltRounds = 10; // Number of salt rounds for hashing
 
 bcrypt.hash(password, saltRounds, function(err, hash) {

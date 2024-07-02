@@ -1,3 +1,4 @@
+// authRoutes.js
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -16,6 +17,11 @@ router.post('/register', (req, res) => {
         res.status(200).send('User registered successfully');
     });
 });
+
+// Export the router
+module.exports = router;
+
+// authRoutes.js (continued)
 
 // Login Route
 router.post('/login', (req, res) => {
@@ -60,3 +66,4 @@ router.get('/me', verifyToken, (req, res) => {
 });
 
 module.exports = router;
+

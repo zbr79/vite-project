@@ -6,7 +6,7 @@ const db = require('./db');
 const router = express.Router();
 
 // Registration Route
-router.post('/register', (req, res) => {
+router.post('/register', (req, res) => { // Note the change here
     const { username, password } = req.body;
     const hashedPassword = bcrypt.hashSync(password, 8);
 
@@ -18,7 +18,7 @@ router.post('/register', (req, res) => {
 });
 
 // Login Route
-router.post('/login', (req, res) => {
+router.post('/login', (req, res) => { // Note the change here
     const { username, password } = req.body;
 
     const sql = 'SELECT * FROM users WHERE username = ?';

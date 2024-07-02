@@ -1,8 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Import the cors middleware
 const authRoutes = require('./authRoutes'); // Ensure the path is correct
 
 const app = express();
+
+// Use CORS middleware
+app.use(cors({
+    origin: ['http://localhost:5177', 'https://zbr7.github.io'], // Replace with your frontend URLs
+    methods: ['GET', 'POST'], // Specify the methods you want to allow
+    allowedHeaders: ['Content-Type', 'Authorization'] // Specify the headers you want to allow
+}));
 
 // Middleware to parse incoming requests with JSON payloads
 app.use(bodyParser.json());

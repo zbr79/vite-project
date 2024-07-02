@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/AccountPage.css';
 
@@ -7,6 +7,22 @@ function AccountPage() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(''); // State to handle success messages
+    const [connectionError, setConnectionError] = useState(''); // State to handle connection errors
+
+    useEffect(() => {
+        // Check connection to the backend
+        const checkConnection = async () => {
+            try {
+                // Make a test request to your backend's health check endpoint
+                await axios.get('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/health'); // Ensure the scheme is correct (http or https)
+                setConnectionError('');
+            } catch (err) {
+                setConnectionError('Failed to connect to the backend. Please check your server.');
+            }
+        };
+
+        checkConnection();
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,17 +39,15 @@ function AccountPage() {
 
         // Backend interaction with Axios
         try {
-            const response = await axios.post('http://localhost:3000/api/auth/login', { 
+            const response = await axios.post('http://vite-project-zbr.us-west-2.elasticbeanstalk.com/api/auth/register', { 
                 username, 
                 password 
             });
 
             if (response.status === 200) {
-                // Successful authentication
-                // Store token in localStorage
-                localStorage.setItem('token', response.data.token);
+                // Successful registration
                 // Set success message
-                setSuccess('Login successful! Redirecting...');
+                setSuccess('Registration successful! Redirecting...');
                 // Redirect the user to a different page
                 setTimeout(() => {
                     window.location.href = '/dashboard';
@@ -41,8 +55,8 @@ function AccountPage() {
             }
         } catch (error) {
             if (error.response) {
-                // The request was made and the server responded with a status code
-                // that falls out of the range of 2xx
+                console.log('Response status code:', error.response.status);
+            
                 if (error.response.status === 401) {
                     setError('Invalid username or password.');
                 } else if (error.response.status === 404) {
@@ -61,6 +75,7 @@ function AccountPage() {
     return (
         <div className="account-page">
             <h2 className="account-page-title">Account Page</h2>
+            {connectionError && <p className="error-message">{connectionError}</p>}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username" className="form-label">Username:</label>

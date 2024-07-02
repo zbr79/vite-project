@@ -10,7 +10,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && npm run deploy-gh-pages",
+    "deploy-gh-pages": "gh-pages -d dist -b gh-pages -n 'Deploy to GitHub Pages' && cp CNAME dist/CNAME"
   },
   "dependencies": {
     "axios": "^1.6.8",
